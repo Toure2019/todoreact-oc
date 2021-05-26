@@ -14,14 +14,14 @@ const Footer = (props) => {
 	// Créez votre constante permettant de récupère tous nos props via le `destructuring assigment`.
 	const { completedCount, activeCount, currentFilter, onChangeFilter, onClearCompleted } = props;  // destructuring assignment
 	// Créez votre constante `itemWord` permettant d'afficher les tâches restantes.
-	const itemWord = [];
+	const itemWord = ['tâches restantes', 'tâche restante'];
 
 	return (
 		<footer className="footer">
 			<span className="todo-count">
 				<strong>
 					{activeCount || 'Aucune'}
-				</strong> {itemWord}
+				</strong> {activeCount >= 2 ? itemWord[0] : itemWord[2]}
 			</span>
 			<ul className="filters">
 				{
