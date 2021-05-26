@@ -12,7 +12,9 @@ const FILTER_TITLES = {
 
 const Footer = (props) => {
 	// Créez votre constante permettant de récupère tous nos props via le `destructuring assigment`.
+	const { completedCount, activeCount, currentFilter, onChangeFilter, onClearCompleted } = props;  // destructuring assignment
 	// Créez votre constante `itemWord` permettant d'afficher les tâches restantes.
+	const itemWord = [];
 
 	return (
 		<footer className="footer">
