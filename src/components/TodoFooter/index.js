@@ -50,5 +50,12 @@ const Footer = (props) => {
 }
 
 // Codez le propTypes du footer ici.
+Footer.PropTypes = {
+	completedCount: PropTypes.number.isRequired,
+	activeCount: PropTypes.number.isRequired,
+	currentFilter: PropTypes.string.isRequired,
+	onChangeFilter: PropTypes.func.isRequired,
+	onClearCompleted: PropTypes.func.isRequired,
+}
 
 export default Footer
